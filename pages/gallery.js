@@ -4,7 +4,7 @@ import Album from "../components/Album";
 export default function Gallery() {
   return (
     <section
-      className="hero is-fullheight is-dark is-bold"
+      className="hero is-fullheight is-warning is-bold"
       style={{ boxShadow: "5px 5px 5px 5px #d1ccc0" }}
     >
       <Navbar />

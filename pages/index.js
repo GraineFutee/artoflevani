@@ -46,7 +46,6 @@ export default function Home(props) {
         backgroundRepeat: "no-repeat",
         WebkitTransition: "background-image 3s ease-in-out",
         transition: "background-image 3s ease-in-out",
-        // transition: "background-image 2s",
       }}
     >
       <Navbar />

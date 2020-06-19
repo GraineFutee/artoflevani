@@ -51,7 +51,12 @@ export default function Navbar(props) {
           >
             About me
           </a>
-          <a className="navbar-item is-tab" href="/contact">
+          <a
+            className={`navbar-item is-tab  ${
+              props.page === "contact" && "is-active"
+            }`}
+            href="/contact"
+          >
             Price & Contact
           </a>
         </div>
