@@ -32,6 +32,7 @@ export async function getStaticProps(data) {
   );
   const images = fs.readdirSync(albumDirectory);
   images.splice(0, 1);
+  images.splice(images.indexOf("index.jpg"), 1);
   let imageArray1 = [];
   let imageArray2 = [];
   let imageArray3 = [];
