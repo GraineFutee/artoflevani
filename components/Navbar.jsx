@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 
 export default function Navbar(props) {
   const [Item, activeItem] = useState(null);
@@ -29,20 +30,14 @@ export default function Navbar(props) {
         className={`navbar-menu ${burger && "is-active"}`}
       >
         <div className="navbar-end">
-          <div className="navbar-item is-tab has-dropdown is-hoverable">
-            <a className="navbar-link" href="/gallery">
-              Gallery
-            </a>
-
-            <div className="navbar-dropdown">
-              <a className="navbar-item">CityScape</a>
-              <a className="navbar-item">LandScape</a>
-              <a className="navbar-item">Portraits</a>
-              <hr className="navbar-divider" />
-              <a className="navbar-item">All</a>
-            </div>
-          </div>
-
+          <a
+            className={`navbar-item is-tab ${
+              props.page === "gallery" && "is-active"
+            }`}
+            href="/gallery"
+          >
+            Gallery
+          </a>
           <a
             className={`navbar-item is-tab ${
               props.page === "about_me" && "is-active"

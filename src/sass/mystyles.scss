@@ -37,6 +37,8 @@ $navbar-background-color: transparent;
 $navbar-dropdown-background-color: transparent;
 $navbar-item-hover-background-color: transparent;
 
+$modal-content-width: calc(100vh - 40px);
+
 $navbar-item-color: #ffffff;
 // Import only what you need from Bulma
 @import "../../node_modules/bulma/bulma.sass";
