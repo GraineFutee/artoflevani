@@ -38,7 +38,7 @@ export default function Gallery(props) {
         <div className="container">
           <div className="columns is-gapless is-multiline">
             {props.albums.map((album) => (
-              <div className="column is-one-third" key={album}>
+              <div className="column is-one-third" key={album.name}>
                 <Album album={album.name} pictures={album.pictures} />
               </div>
             ))}

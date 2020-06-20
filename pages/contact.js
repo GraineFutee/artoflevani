@@ -17,44 +17,47 @@ export default function Contact() {
                 Portrait Photography{" "}
                 <small>(glamor, couples, family, animals)</small>
               </p>
-              <div class="pricing-table is-comparative">
-                <div class="pricing-plan is-features">
-                  <div class="plan-header">Features</div>
-                  <div class="plan-price">
-                    <span class="plan-price-amount">&nbsp;</span>
+              <div className="pricing-table is-comparative">
+                <div className="pricing-plan is-features">
+                  <div className="plan-header">Features</div>
+                  <div className="plan-price">
+                    <span className="plan-price-amount">&nbsp;</span>
                   </div>
-                  <div class="plan-items">
-                    <div class="plan-item">Location</div>
-                    <div class="plan-item">Unedited photos</div>
-                    <div class="plan-item">Light photoshopped</div>
-                    <div class="plan-item">Photoshopped</div>
-                    <div class="plan-item">Professional retouching</div>
+                  <div className="plan-items">
+                    <div className="plan-item">Location</div>
+                    <div className="plan-item">Unedited photos</div>
+                    <div className="plan-item">Light photoshopped</div>
+                    <div className="plan-item">Photoshopped</div>
+                    <div className="plan-item">Professional retouching</div>
                   </div>
-                  <div class="plan-footer"></div>
+                  <div className="plan-footer"></div>
                 </div>
 
-                <div class="pricing-plan is-warning is-active">
-                  <div class="plan-header">Small</div>
-                  <div class="plan-price">
-                    <span class="plan-price-amount">
-                      <span class="plan-price-currency">Kr</span>1500
+                <div className="pricing-plan is-warning is-active">
+                  <div className="plan-header">Small</div>
+                  <div className="plan-price">
+                    <span className="plan-price-amount">
+                      <span className="plan-price-currency">Kr</span>1500
                     </span>
                   </div>
-                  <div class="plan-items">
-                    <div class="plan-item" data-feature="Location">
+                  <div className="plan-items">
+                    <div className="plan-item" data-feature="Location">
                       1
                     </div>
-                    <div class="plan-item" data-feature="Unedited photos">
+                    <div className="plan-item" data-feature="Unedited photos">
                       20
                     </div>
-                    <div class="plan-item" data-feature="Light photoshopped">
+                    <div
+                      className="plan-item"
+                      data-feature="Light photoshopped"
+                    >
                       10
                     </div>
-                    <div class="plan-item" data-feature="Photoshopped">
+                    <div className="plan-item" data-feature="Photoshopped">
                       2
                     </div>
                     <div
-                      class="plan-item"
+                      className="plan-item"
                       data-feature="Professional retouching"
                     >
                       1
@@ -62,28 +65,31 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div class="pricing-plan is-info">
-                  <div class="plan-header">Medium</div>
-                  <div class="plan-price">
-                    <span class="plan-price-amount">
-                      <span class="plan-price-currency">Kr</span>2000
+                <div className="pricing-plan is-info">
+                  <div className="plan-header">Medium</div>
+                  <div className="plan-price">
+                    <span className="plan-price-amount">
+                      <span className="plan-price-currency">Kr</span>2000
                     </span>
                   </div>
-                  <div class="plan-items">
-                    <div class="plan-item" data-feature="Location">
+                  <div className="plan-items">
+                    <div className="plan-item" data-feature="Location">
                       2 - 3
                     </div>
-                    <div class="plan-item" data-feature="Unedited photos">
+                    <div className="plan-item" data-feature="Unedited photos">
                       50
                     </div>
-                    <div class="plan-item" data-feature="Light photoshopped">
+                    <div
+                      className="plan-item"
+                      data-feature="Light photoshopped"
+                    >
                       20
                     </div>
-                    <div class="plan-item" data-feature="Photoshopped">
+                    <div className="plan-item" data-feature="Photoshopped">
                       5
                     </div>
                     <div
-                      class="plan-item"
+                      className="plan-item"
                       data-feature="Professional retouching"
                     >
                       2
@@ -91,28 +97,31 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div class="pricing-plan is-danger">
-                  <div class="plan-header">Large</div>
-                  <div class="plan-price">
-                    <span class="plan-price-amount">
-                      <span class="plan-price-currency">Kr</span>4000
+                <div className="pricing-plan is-danger">
+                  <div className="plan-header">Large</div>
+                  <div className="plan-price">
+                    <span className="plan-price-amount">
+                      <span className="plan-price-currency">Kr</span>4000
                     </span>
                   </div>
-                  <div class="plan-items">
-                    <div class="plan-item" data-feature="Location">
+                  <div className="plan-items">
+                    <div className="plan-item" data-feature="Location">
                       4 +
                     </div>
-                    <div class="plan-item" data-feature="Unedited photos">
+                    <div className="plan-item" data-feature="Unedited photos">
                       All (100 +)
                     </div>
-                    <div class="plan-item" data-feature="Light photoshopped">
+                    <div
+                      className="plan-item"
+                      data-feature="Light photoshopped"
+                    >
                       50
                     </div>
-                    <div class="plan-item" data-feature="Photoshopped">
+                    <div className="plan-item" data-feature="Photoshopped">
                       10
                     </div>
                     <div
-                      class="plan-item"
+                      className="plan-item"
                       data-feature="Professional retouching"
                     >
                       5
@@ -122,44 +131,47 @@ export default function Contact() {
               </div>
               <h2 className="title is-5">Package 2</h2>
               <p className="subtitle is-6">Wedding Photography</p>
-              <div class="pricing-table is-comparative">
-                <div class="pricing-plan is-features">
-                  <div class="plan-header">Features</div>
-                  <div class="plan-price">
-                    <span class="plan-price-amount">&nbsp;</span>
+              <div className="pricing-table is-comparative">
+                <div className="pricing-plan is-features">
+                  <div className="plan-header">Features</div>
+                  <div className="plan-price">
+                    <span className="plan-price-amount">&nbsp;</span>
                   </div>
-                  <div class="plan-items">
-                    <div class="plan-item">Hours of work</div>
-                    <div class="plan-item">Unedited photos</div>
-                    <div class="plan-item">Light photoshopped</div>
-                    <div class="plan-item">Photoshopped</div>
-                    <div class="plan-item">Professional retouching</div>
+                  <div className="plan-items">
+                    <div className="plan-item">Hours of work</div>
+                    <div className="plan-item">Unedited photos</div>
+                    <div className="plan-item">Light photoshopped</div>
+                    <div className="plan-item">Photoshopped</div>
+                    <div className="plan-item">Professional retouching</div>
                   </div>
-                  <div class="plan-footer"></div>
+                  <div className="plan-footer"></div>
                 </div>
 
-                <div class="pricing-plan is-warning">
-                  <div class="plan-header">Small</div>
-                  <div class="plan-price">
-                    <span class="plan-price-amount">
-                      <span class="plan-price-currency">Kr</span>6500
+                <div className="pricing-plan is-warning">
+                  <div className="plan-header">Small</div>
+                  <div className="plan-price">
+                    <span className="plan-price-amount">
+                      <span className="plan-price-currency">Kr</span>6500
                     </span>
                   </div>
-                  <div class="plan-items">
-                    <div class="plan-item" data-feature="Location">
+                  <div className="plan-items">
+                    <div className="plan-item" data-feature="Location">
                       4
                     </div>
-                    <div class="plan-item" data-feature="Unedited photos">
+                    <div className="plan-item" data-feature="Unedited photos">
                       All
                     </div>
-                    <div class="plan-item" data-feature="Light photoshopped">
+                    <div
+                      className="plan-item"
+                      data-feature="Light photoshopped"
+                    >
                       100
                     </div>
-                    <div class="plan-item" data-feature="Photoshopped">
+                    <div className="plan-item" data-feature="Photoshopped">
                       10
                     </div>
                     <div
-                      class="plan-item"
+                      className="plan-item"
                       data-feature="Professional retouching"
                     >
                       5
@@ -167,28 +179,31 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div class="pricing-plan is-info is-active">
-                  <div class="plan-header">Medium</div>
-                  <div class="plan-price">
-                    <span class="plan-price-amount">
-                      <span class="plan-price-currency">Kr</span>10000
+                <div className="pricing-plan is-info is-active">
+                  <div className="plan-header">Medium</div>
+                  <div className="plan-price">
+                    <span className="plan-price-amount">
+                      <span className="plan-price-currency">Kr</span>10000
                     </span>
                   </div>
-                  <div class="plan-items">
-                    <div class="plan-item" data-feature="Location">
+                  <div className="plan-items">
+                    <div className="plan-item" data-feature="Location">
                       8
                     </div>
-                    <div class="plan-item" data-feature="Unedited photos">
+                    <div className="plan-item" data-feature="Unedited photos">
                       All
                     </div>
-                    <div class="plan-item" data-feature="Light photoshopped">
+                    <div
+                      className="plan-item"
+                      data-feature="Light photoshopped"
+                    >
                       150
                     </div>
-                    <div class="plan-item" data-feature="Photoshopped">
+                    <div className="plan-item" data-feature="Photoshopped">
                       20
                     </div>
                     <div
-                      class="plan-item"
+                      className="plan-item"
                       data-feature="Professional retouching"
                     >
                       10
@@ -196,28 +211,31 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div class="pricing-plan is-danger">
-                  <div class="plan-header">Large</div>
-                  <div class="plan-price">
-                    <span class="plan-price-amount">
-                      <span class="plan-price-currency">Kr</span>13000
+                <div className="pricing-plan is-danger">
+                  <div className="plan-header">Large</div>
+                  <div className="plan-price">
+                    <span className="plan-price-amount">
+                      <span className="plan-price-currency">Kr</span>13000
                     </span>
                   </div>
-                  <div class="plan-items">
-                    <div class="plan-item" data-feature="Location">
+                  <div className="plan-items">
+                    <div className="plan-item" data-feature="Location">
                       12
                     </div>
-                    <div class="plan-item" data-feature="Unedited photos">
+                    <div className="plan-item" data-feature="Unedited photos">
                       All
                     </div>
-                    <div class="plan-item" data-feature="Light photoshopped">
+                    <div
+                      className="plan-item"
+                      data-feature="Light photoshopped"
+                    >
                       200
                     </div>
-                    <div class="plan-item" data-feature="Photoshopped">
+                    <div className="plan-item" data-feature="Photoshopped">
                       50
                     </div>
                     <div
-                      class="plan-item"
+                      className="plan-item"
                       data-feature="Professional retouching"
                     >
                       15
@@ -238,28 +256,28 @@ export default function Contact() {
                   <p>E-mail : ArtofLevanidze@gmail.com</p>
                 </div>
                 <form>
-                  <div class="field">
-                    <div class="control">
+                  <div className="field">
+                    <div className="control">
                       <input
-                        class="input is-dark"
+                        className="input is-dark"
                         type="text"
                         placeholder="Name"
                       />
                     </div>
                   </div>
-                  <div class="field">
-                    <div class="control">
+                  <div className="field">
+                    <div className="control">
                       <input
-                        class="input is-dark"
+                        className="input is-dark"
                         type="text"
                         placeholder="E-mail"
                       />
                     </div>
                   </div>
-                  <div class="field">
-                    <div class="control">
+                  <div className="field">
+                    <div className="control">
                       <textarea
-                        class="textarea is-dark"
+                        className="textarea is-dark"
                         placeholder="Message"
                       ></textarea>
                     </div>
