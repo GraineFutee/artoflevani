@@ -27,7 +27,10 @@ export default function Album(props) {
       >
         <i style={{ margin: "5px" }} className="fab fa-500px"></i>
       </a>
-      <i className="has-text-white is-size-7" style={{ margin: "5px" }}>
+      <i
+        className="has-text-white is-size-7 is-pulled-right"
+        style={{ margin: "5px" }}
+      >
         <b>&copy;</b> Levani Levanidze
       </i>
     </div>

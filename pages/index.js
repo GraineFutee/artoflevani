@@ -28,7 +28,6 @@ export default function Home(props) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log("background changed");
       if (background > listBackgrounds.length - 2) setBackground(0);
       else setBackground(background + 1);
     }, 5000);
