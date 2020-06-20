@@ -4,12 +4,14 @@ import Link from "next/link";
 export default function Album(props) {
   const [opacity, setOpacity] = useState("0");
   const [scale, setScale] = useState("1");
-  const [isTooSmall, setTooSmall] = useState(true);
+  const [isTooSmall, setTooSmall] = useState(null);
 
   useEffect(() => {
-    window.addEventListener("resize", () =>
-      setTooSmall(window.innerWidth <= 760)
-    );
+    window.addEventListener("resize", () => {
+      if (window.innerWidth <= 760 !== isTooSmall) {
+        setTooSmall(window.innerWidth <= 760);
+      }
+    });
     setTooSmall(window.innerWidth <= 760);
   }, []);
 
