@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function AboutMe() {
   return (
@@ -110,11 +111,7 @@ export default function AboutMe() {
             </div>
           </div>
         </div>
-        <div className="title is-5 has-text-white" style={{ margin: "10px" }}>
-          <i style={{ margin: "5px" }} className="fab fa-facebook"></i>
-          <i style={{ margin: "5px" }} className="fab fa-instagram"></i>
-          <i style={{ margin: "5px" }} className="fab fa-500px"></i>
-        </div>
+        <Footer />
       </section>
     </>
   );

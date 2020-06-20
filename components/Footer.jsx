@@ -1,0 +1,35 @@
+import React from "react";
+
+export default function Album(props) {
+  return (
+    <div className="is-size-5" style={{ margin: "10px" }}>
+      <a
+        className="has-text-white"
+        href="https://www.facebook.com/levanidze"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <i style={{ margin: "5px" }} className="fab fa-facebook"></i>
+      </a>
+      <a
+        className="has-text-white"
+        href="https://www.instagram.com/artoflevanidze/"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <i style={{ margin: "5px" }} className="fab fa-instagram"></i>
+      </a>
+      <a
+        className="has-text-white"
+        href="https://500px.com/levanidze"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <i style={{ margin: "5px" }} className="fab fa-500px"></i>
+      </a>
+      <i className="has-text-white is-size-7" style={{ margin: "5px" }}>
+        <b>&copy;</b> Levani Levanidze
+      </i>
+    </div>
+  );
+}

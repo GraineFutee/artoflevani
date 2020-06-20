@@ -3,6 +3,7 @@ import path from "path";
 
 import Navbar from "../../components/Navbar";
 import Album from "../../components/Album";
+import Footer from "../../components/Footer";
 
 // This function gets called at build time on server-side.
 // It won't be called on client-side, so you can even do
@@ -45,11 +46,7 @@ export default function Gallery(props) {
           </div>
         </div>
       </div>
-      <div className="title is-5 has-text-white" style={{ margin: "10px" }}>
-        <i style={{ margin: "5px" }} className="fab fa-facebook"></i>
-        <i style={{ margin: "5px" }} className="fab fa-instagram"></i>
-        <i style={{ margin: "5px" }} className="fab fa-500px"></i>
-      </div>
+      <Footer />
     </section>
   );
 }

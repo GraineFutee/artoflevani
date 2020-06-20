@@ -1,11 +1,10 @@
 import fs from "fs";
 import path from "path";
-
-import { useRouter } from "next/router";
+import { useState } from "react";
 
 import Navbar from "../../components/Navbar";
 import Image from "../../components/Image";
-import { useState } from "react";
+import Footer from "../../components/Footer";
 
 // pages/blog/[slug].js
 export async function getStaticPaths() {
@@ -157,11 +156,7 @@ export default function Gallery(props) {
           onClick={() => modalSwitch(false)}
         ></button>
       </div>
-      <div className="title is-5 has-text-white" style={{ margin: "10px" }}>
-        <i style={{ margin: "5px" }} className="fab fa-facebook"></i>
-        <i style={{ margin: "5px" }} className="fab fa-instagram"></i>
-        <i style={{ margin: "5px" }} className="fab fa-500px"></i>
-      </div>
+      <Footer />
     </section>
   );
 }
