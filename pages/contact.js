@@ -298,7 +298,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer color="white" />
       </section>
     </>
   );

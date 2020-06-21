@@ -4,7 +4,7 @@ export default function Album(props) {
   return (
     <div className="is-size-5" style={{ margin: "10px" }}>
       <a
-        className="has-text-white"
+        className={`has-text-${props.color}`}
         href="https://www.facebook.com/levanidze"
         target="_blank"
         rel="noreferrer noopener"
@@ -12,7 +12,7 @@ export default function Album(props) {
         <i style={{ margin: "5px" }} className="fab fa-facebook"></i>
       </a>
       <a
-        className="has-text-white"
+        className={`has-text-${props.color}`}
         href="https://www.instagram.com/artoflevanidze/"
         target="_blank"
         rel="noreferrer noopener"
@@ -20,7 +20,7 @@ export default function Album(props) {
         <i style={{ margin: "5px" }} className="fab fa-instagram"></i>
       </a>
       <a
-        className="has-text-white"
+        className={`has-text-${props.color}`}
         href="https://500px.com/levanidze"
         target="_blank"
         rel="noreferrer noopener"
@@ -28,7 +28,7 @@ export default function Album(props) {
         <i style={{ margin: "5px" }} className="fab fa-500px"></i>
       </a>
       <i
-        className="has-text-white is-size-7 is-pulled-right"
+        className={`has-text-${props.color} is-size-7 is-pulled-right`}
         style={{ margin: "5px" }}
       >
         <b>&copy;</b> Levani Levanidze

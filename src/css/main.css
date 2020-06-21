@@ -3903,7 +3903,7 @@ a.navbar-item,
   .navbar-link:hover,
   .navbar-link.is-active {
     background-color: transparent;
-    color: #63cdda; }
+    color: #ecf0f1; }
 
 .navbar-item {
   flex-grow: 0;
@@ -3921,10 +3921,10 @@ a.navbar-item,
     padding-bottom: calc(0.5rem - 1px); }
     .navbar-item.is-tab:focus, .navbar-item.is-tab:hover {
       background-color: transparent;
-      border-bottom-color: #63cdda; }
+      border-bottom-color: #ecf0f1; }
     .navbar-item.is-tab.is-active {
       background-color: transparent;
-      border-bottom-color: #63cdda;
+      border-bottom-color: #ecf0f1;
       border-bottom-style: solid;
       border-bottom-width: 3px;
       color: #63cdda;

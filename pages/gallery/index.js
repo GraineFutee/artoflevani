@@ -46,7 +46,7 @@ export default function Gallery(props) {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer color="dark" />
     </section>
   );
 }

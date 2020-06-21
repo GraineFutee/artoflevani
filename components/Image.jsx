@@ -4,7 +4,7 @@ export default function Album(props) {
   const [opacity, setOpacity] = useState("0");
   return (
     <figure className="image" style={{ padding: "0.3rem" }}>
-      <img src={`/images/gallery/${props.album}/${props.image}`} />
+      <img src={`/images/${props.folder}${props.album}/${props.image}`} />
       <div
         className="hero-body is-overlay"
         onMouseEnter={() => {

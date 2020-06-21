@@ -1,7 +1,32 @@
+import fs from "fs";
+import path from "path";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Image from "../components/Image";
 
-export default function AboutMe() {
+export async function getStaticProps() {
+  const certificationsDirectory = path.join(
+    process.cwd(),
+    "public/images/certifications"
+  );
+  const filesName = fs.readdirSync(certificationsDirectory);
+  filesName.splice(0, 1);
+  const images = filesName.map((fileName) => {
+    return {
+      image: fileName,
+      name: fileName.split(".").slice(0, -1).join("."),
+    };
+  });
+
+  return {
+    props: {
+      images,
+    },
+  };
+}
+
+export default function AboutMe(props) {
   return (
     <>
       <section
@@ -58,60 +83,22 @@ export default function AboutMe() {
                 <div className="column is-1"></div>
               </div>
               <h1 className="title is-4">Certifications</h1>
-              <div className="columns">
-                <div className="column">
-                  <figure
-                    className="image is-4by3"
-                    style={{
-                      backgroundColor: "#2c3e50",
-                      backgroundImage: `url(/images/backgrounds/aditya-joshi-KWTdFcVbhgA-unsplash.jpg)`,
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                    }}
-                  ></figure>
-                </div>
-                <div className="column">
-                  <figure
-                    className="image is-4by3"
-                    style={{
-                      backgroundColor: "#2c3e50",
-                      backgroundImage: `url(/images/backgrounds/aditya-joshi-KWTdFcVbhgA-unsplash.jpg)`,
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                    }}
-                  ></figure>
-                </div>
-                <div className="column">
-                  <figure
-                    className="image is-4by3"
-                    style={{
-                      backgroundColor: "#2c3e50",
-                      backgroundImage: `url(/images/backgrounds/aditya-joshi-KWTdFcVbhgA-unsplash.jpg)`,
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                    }}
-                  ></figure>
-                </div>
-                <div className="column">
-                  <figure
-                    className="image is-4by3"
-                    style={{
-                      backgroundColor: "#2c3e50",
-                      backgroundImage: `url(/images/backgrounds/aditya-joshi-KWTdFcVbhgA-unsplash.jpg)`,
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                    }}
-                  ></figure>
-                </div>
+              <div className="columns is-multiline">
+                {props.images.map((image) => (
+                  <div className="column is-3" key={image}>
+                    <Image
+                      folder="certifications"
+                      album=""
+                      image={image.image}
+                      name={image.name}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer color="white" />
       </section>
     </>
   );

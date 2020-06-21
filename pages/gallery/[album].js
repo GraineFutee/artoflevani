@@ -29,9 +29,15 @@ export async function getStaticProps(data) {
     process.cwd(),
     `public/images/gallery/${data.params.album}`
   );
-  const images = fs.readdirSync(albumDirectory);
-  images.splice(0, 1);
-  images.splice(images.indexOf("index.jpg"), 1);
+  const filesName = fs.readdirSync(albumDirectory);
+  filesName.splice(0, 1);
+  filesName.splice(filesName.indexOf("index.jpg"), 1);
+  const images = filesName.map((fileName) => {
+    return {
+      image: fileName,
+      name: fileName.split(".").slice(0, -1).join("."),
+    };
+  });
   let imageArray1 = [];
   let imageArray2 = [];
   let imageArray3 = [];
@@ -70,20 +76,26 @@ export default function Gallery(props) {
   const [modalActive, modalSwitch] = useState(false);
   return (
     <section
-      className="hero is-fullheight is-warning is-bold"
+      className="hero is-fullheight is-light is-bold"
       style={{ boxShadow: "5px 5px 5px 5px #d1ccc0" }}
     >
       <Navbar page="gallery" />
       <div className="hero-body" style={{ padding: "0" }}>
         <div className="container">
-          <h1 className="title">{props.album}</h1>
+          <h1 className="title">
+            <a className="has-text-dark" href="/gallery">
+              <i className="fas fa-arrow-alt-circle-left"></i>
+            </a>
+            &nbsp;&nbsp;
+            {props.album}
+          </h1>
           <div className="columns is-gapless">
             {props.imagesColumns.map((column, index) => (
               <div className="column" key={`column${index}`}>
                 {column.map((image) => (
                   <a
                     key={image}
-                    id={`${props.album}/${image}`}
+                    id={`${props.album}/${image.image}`}
                     onClick={(event) => {
                       setImageModal(
                         `/images/gallery/${event.currentTarget.id}`
@@ -91,7 +103,12 @@ export default function Gallery(props) {
                       modalSwitch(true);
                     }}
                   >
-                    <Image album={props.album} image={image} name={image} />
+                    <Image
+                      folder="gallery"
+                      album={`/${props.album}`}
+                      image={image.image}
+                      name={image.name}
+                    />
                   </a>
                 ))}
               </div>
@@ -156,7 +173,7 @@ export default function Gallery(props) {
           onClick={() => modalSwitch(false)}
         ></button>
       </div>
-      <Footer />
+      <Footer color="dark" />
     </section>
   );
 }

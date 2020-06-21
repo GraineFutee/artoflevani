@@ -54,7 +54,7 @@ export default function Home(props) {
           <h1 className="title has-text-white is-1">Art of Levani </h1>
         </div>
       </div>
-      <Footer />
+      <Footer color="white" />
     </section>
   );
 }
