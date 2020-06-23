@@ -25,31 +25,62 @@ export async function getStaticProps() {
 export default function Home(props) {
   const [listBackgrounds] = useState(props.images);
   const [background, setBackground] = useState(0);
+  const [background2, setBackground2] = useState(1);
+  const [zIndex2, setZIndex2] = useState(2);
+  const [opacity, setOpacity] = useState("1");
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (background > listBackgrounds.length - 2) setBackground(0);
-      else setBackground(background + 1);
-    }, 5000);
+      setZIndex2(zIndex2 * -1);
+      if (1 > zIndex2) {
+        setOpacity("1");
+        setTimeout(() => {
+          if (background2 + 2 > listBackgrounds.length - 1) {
+            if (background2 + 1 > listBackgrounds.length - 1) setBackground2(0);
+            else setBackground2(background2 + 1);
+          } else setBackground2(background2 + 2);
+        }, 1000);
+      } else {
+        setOpacity("0");
+        setTimeout(() => {
+          if (background + 2 > listBackgrounds.length - 1) {
+            if (background + 1 > listBackgrounds.length - 1) setBackground(0);
+            else setBackground(background + 1);
+          } else setBackground(background + 2);
+        }, 1000);
+      }
+    }, 3000);
     return () => clearInterval(interval);
-  }, [background, listBackgrounds]);
+  }, [background, listBackgrounds, zIndex2, background2, opacity]);
 
   return (
-    <section
-      id="welcome"
-      className="hero is-fullheight welcome"
-      style={{
-        backgroundColor: "#2c3e50",
-        backgroundImage: `url(/images/backgrounds/${listBackgrounds[background]})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        WebkitTransition: "background-image 3s ease-in-out",
-        transition: "background-image 3s ease-in-out",
-      }}
-    >
+    <section id="welcome" className="hero is-fullheight welcome">
+      <section
+        className="is-overlay"
+        style={{
+          backgroundColor: "#2c3e50",
+          backgroundImage: `url(/images/backgrounds/${listBackgrounds[background]})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          zIndex: "2",
+          opacity: opacity,
+          transition: "opacity 1s ease-in-out",
+        }}
+      ></section>
+      <section
+        className="is-overlay"
+        style={{
+          backgroundColor: "#2c3e50",
+          backgroundImage: `url(/images/backgrounds/${listBackgrounds[background2]})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          zIndex: "1",
+        }}
+      ></section>
       <Navbar />
-      <div className="hero-body">
+      <div className="hero-body" style={{ zIndex: "10" }}>
         <div className="container has-text-centered">
           <h1 className="title has-text-white is-1">Art of Levani </h1>
         </div>

@@ -5,7 +5,12 @@ export default function Navbar(props) {
   const [Item, activeItem] = useState(null);
   const [burger, activeBurger] = useState(false);
   return (
-    <nav className="navbar" role="navigation" aria-label="main navigation">
+    <nav
+      className="navbar"
+      role="navigation"
+      aria-label="main navigation"
+      style={{ zIndex: "10" }}
+    >
       <div className="navbar-brand">
         <a className="navbar-item" href="/">
           ART OF LEVANI

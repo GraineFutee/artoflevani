@@ -91,10 +91,13 @@ export default function Gallery(props) {
           </h1>
           <div className="columns is-gapless">
             {props.imagesColumns.map((column, index) => (
-              <div className="column" key={`column${index}`}>
+              <div
+                className="column"
+                key={`album${props.album}-column${index}`}
+              >
                 {column.map((image) => (
                   <a
-                    key={image}
+                    key={image.name}
                     id={`${props.album}/${image.image}`}
                     onClick={(event) => {
                       setImageModal(

@@ -2,7 +2,11 @@ import React from "react";
 
 export default function Album(props) {
   return (
-    <div className="is-size-5" style={{ margin: "10px" }}>
+    <div
+      className="is-size-5"
+      style={{ margin: "10px" }}
+      style={{ zIndex: "10" }}
+    >
       <a
         className={`has-text-${props.color}`}
         href="https://www.facebook.com/levanidze"

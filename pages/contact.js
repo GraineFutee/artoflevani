@@ -1,248 +1,153 @@
 import Navbar from "../components/Navbar";
+import PricingTable from "../components/PricingTable";
 import Footer from "../components/Footer";
+import { useState } from "react";
 
 export default function Contact() {
+  const [height, setHeight] = useState("2000px");
+  const [pricingTables] = useState([
+    {
+      name: "Portrait Photography",
+      description: "glamor, couples, family, animals",
+      deals: [
+        {
+          name: "Small",
+          color: "is-warning",
+          currency: "Kr",
+          price: "1500",
+          featuresValues: [
+            "1 Location",
+            "20 Unedited photos",
+            "10 Light photoshopped",
+            "2 Photoshopped",
+            "1 Professional retouching",
+          ],
+        },
+        {
+          name: "Medium",
+          color: "is-info",
+          currency: "Kr",
+          price: "2000",
+          featuresValues: [
+            "2 - 3 Location",
+            "50 Unedited photos",
+            "20 Light photoshopped",
+            "5 Photoshopped",
+            "2 Professional retouching",
+          ],
+        },
+        {
+          name: "Large",
+          color: "is-danger",
+          currency: "Kr",
+          price: "4000",
+          featuresValues: [
+            "4 + Location",
+            "All (100 +) Unedited photos",
+            "50 Light photoshopped",
+            "10 Photoshopped",
+            "5 Professional retouching",
+          ],
+        },
+      ],
+    },
+    {
+      name: "Wedding Photography",
+      description:
+        "Taking picture during all the ceremonie according to the deal",
+      deals: [
+        {
+          name: "Small",
+          color: "is-warning",
+          currency: "Kr",
+          price: "6500",
+          featuresValues: [
+            "4 Hours of work",
+            "All Unedited photos",
+            "100 Light photoshopped",
+            "10 Photoshopped",
+            "5 Professional retouching",
+          ],
+        },
+        {
+          name: "Medium",
+          color: "is-info",
+          currency: "Kr",
+          price: "10000",
+          featuresValues: [
+            "8 Hours of work",
+            "All Unedited photos",
+            "150 Light photoshopped",
+            "20 Photoshopped",
+            "10 Professional retouching",
+          ],
+        },
+        {
+          name: "Large",
+          color: "is-danger",
+          currency: "Kr",
+          price: "13000",
+          featuresValues: [
+            "12 Hours of work",
+            "All Unedited photos",
+            "200 Light photoshopped",
+            "50 Photoshopped",
+            "15 Professional retouching",
+          ],
+        },
+      ],
+    },
+  ]);
+  const [activePricingTable, setActivePricingTable] = useState(
+    pricingTables[0]
+  );
+  function switchPricingTable(value) {
+    setHeight("0px");
+    setTimeout(() => {
+      setActivePricingTable(pricingTables[value]);
+      setHeight("2000px");
+    }, 1150);
+  }
   return (
     <>
       <section
         className="hero is-danger is-bold"
-        style={{ boxShadow: "5px 5px 5px 5px #d1ccc0" }}
+        // style={{
+        //   backgroundColor: "#2c3e50",
+        //   backgroundImage: `url(/images/backgrounds/joan-villalon-otG-Gi4ebDo-unsplash.jpg)`,
+        //   backgroundPosition: "center",
+        //   backgroundSize: "cover",
+        //   backgroundRepeat: "no-repeat",
+        //   backgroundAttachment: "fixed",
+        // }}
       >
         <Navbar page="contact" />
         <div className="hero-body">
           <div className="container">
             <h1 className="title is-2">Prices</h1>
             <div className="container">
-              <h2 className="title is-5">Package 1</h2>
-              <p className="subtitle is-6">
-                Portrait Photography{" "}
-                <small>(glamor, couples, family, animals)</small>
-              </p>
-              <div className="pricing-table is-comparative">
-                <div className="pricing-plan is-features">
-                  <div className="plan-header">Features</div>
-                  <div className="plan-price">
-                    <span className="plan-price-amount">&nbsp;</span>
-                  </div>
-                  <div className="plan-items">
-                    <div className="plan-item">Location</div>
-                    <div className="plan-item">Unedited photos</div>
-                    <div className="plan-item">Light photoshopped</div>
-                    <div className="plan-item">Photoshopped</div>
-                    <div className="plan-item">Professional retouching</div>
-                  </div>
-                  <div className="plan-footer"></div>
-                </div>
-
-                <div className="pricing-plan is-warning is-active">
-                  <div className="plan-header">Small</div>
-                  <div className="plan-price">
-                    <span className="plan-price-amount">
-                      <span className="plan-price-currency">Kr</span>1500
-                    </span>
-                  </div>
-                  <div className="plan-items">
-                    <div className="plan-item" data-feature="Location">
-                      1
-                    </div>
-                    <div className="plan-item" data-feature="Unedited photos">
-                      20
-                    </div>
-                    <div
-                      className="plan-item"
-                      data-feature="Light photoshopped"
-                    >
-                      10
-                    </div>
-                    <div className="plan-item" data-feature="Photoshopped">
-                      2
-                    </div>
-                    <div
-                      className="plan-item"
-                      data-feature="Professional retouching"
-                    >
-                      1
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pricing-plan is-info">
-                  <div className="plan-header">Medium</div>
-                  <div className="plan-price">
-                    <span className="plan-price-amount">
-                      <span className="plan-price-currency">Kr</span>2000
-                    </span>
-                  </div>
-                  <div className="plan-items">
-                    <div className="plan-item" data-feature="Location">
-                      2 - 3
-                    </div>
-                    <div className="plan-item" data-feature="Unedited photos">
-                      50
-                    </div>
-                    <div
-                      className="plan-item"
-                      data-feature="Light photoshopped"
-                    >
-                      20
-                    </div>
-                    <div className="plan-item" data-feature="Photoshopped">
-                      5
-                    </div>
-                    <div
-                      className="plan-item"
-                      data-feature="Professional retouching"
-                    >
-                      2
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pricing-plan is-danger">
-                  <div className="plan-header">Large</div>
-                  <div className="plan-price">
-                    <span className="plan-price-amount">
-                      <span className="plan-price-currency">Kr</span>4000
-                    </span>
-                  </div>
-                  <div className="plan-items">
-                    <div className="plan-item" data-feature="Location">
-                      4 +
-                    </div>
-                    <div className="plan-item" data-feature="Unedited photos">
-                      All (100 +)
-                    </div>
-                    <div
-                      className="plan-item"
-                      data-feature="Light photoshopped"
-                    >
-                      50
-                    </div>
-                    <div className="plan-item" data-feature="Photoshopped">
-                      10
-                    </div>
-                    <div
-                      className="plan-item"
-                      data-feature="Professional retouching"
-                    >
-                      5
-                    </div>
-                  </div>
-                </div>
+              <div className="select">
+                <select
+                  onChange={(event) => {
+                    switchPricingTable(event.target.value);
+                  }}
+                >
+                  {pricingTables.map((pricingTable, index) => (
+                    <option value={`${index}`} key={index}>
+                      {pricingTable.name}
+                    </option>
+                  ))}
+                </select>
               </div>
-              <h2 className="title is-5">Package 2</h2>
-              <p className="subtitle is-6">Wedding Photography</p>
-              <div className="pricing-table is-comparative">
-                <div className="pricing-plan is-features">
-                  <div className="plan-header">Features</div>
-                  <div className="plan-price">
-                    <span className="plan-price-amount">&nbsp;</span>
-                  </div>
-                  <div className="plan-items">
-                    <div className="plan-item">Hours of work</div>
-                    <div className="plan-item">Unedited photos</div>
-                    <div className="plan-item">Light photoshopped</div>
-                    <div className="plan-item">Photoshopped</div>
-                    <div className="plan-item">Professional retouching</div>
-                  </div>
-                  <div className="plan-footer"></div>
-                </div>
-
-                <div className="pricing-plan is-warning">
-                  <div className="plan-header">Small</div>
-                  <div className="plan-price">
-                    <span className="plan-price-amount">
-                      <span className="plan-price-currency">Kr</span>6500
-                    </span>
-                  </div>
-                  <div className="plan-items">
-                    <div className="plan-item" data-feature="Location">
-                      4
-                    </div>
-                    <div className="plan-item" data-feature="Unedited photos">
-                      All
-                    </div>
-                    <div
-                      className="plan-item"
-                      data-feature="Light photoshopped"
-                    >
-                      100
-                    </div>
-                    <div className="plan-item" data-feature="Photoshopped">
-                      10
-                    </div>
-                    <div
-                      className="plan-item"
-                      data-feature="Professional retouching"
-                    >
-                      5
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pricing-plan is-info is-active">
-                  <div className="plan-header">Medium</div>
-                  <div className="plan-price">
-                    <span className="plan-price-amount">
-                      <span className="plan-price-currency">Kr</span>10000
-                    </span>
-                  </div>
-                  <div className="plan-items">
-                    <div className="plan-item" data-feature="Location">
-                      8
-                    </div>
-                    <div className="plan-item" data-feature="Unedited photos">
-                      All
-                    </div>
-                    <div
-                      className="plan-item"
-                      data-feature="Light photoshopped"
-                    >
-                      150
-                    </div>
-                    <div className="plan-item" data-feature="Photoshopped">
-                      20
-                    </div>
-                    <div
-                      className="plan-item"
-                      data-feature="Professional retouching"
-                    >
-                      10
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pricing-plan is-danger">
-                  <div className="plan-header">Large</div>
-                  <div className="plan-price">
-                    <span className="plan-price-amount">
-                      <span className="plan-price-currency">Kr</span>13000
-                    </span>
-                  </div>
-                  <div className="plan-items">
-                    <div className="plan-item" data-feature="Location">
-                      12
-                    </div>
-                    <div className="plan-item" data-feature="Unedited photos">
-                      All
-                    </div>
-                    <div
-                      className="plan-item"
-                      data-feature="Light photoshopped"
-                    >
-                      200
-                    </div>
-                    <div className="plan-item" data-feature="Photoshopped">
-                      50
-                    </div>
-                    <div
-                      className="plan-item"
-                      data-feature="Professional retouching"
-                    >
-                      15
-                    </div>
-                  </div>
-                </div>
+              <div
+                className="container is-fluid"
+                style={{
+                  overflow: "hidden",
+                  maxHeight: height,
+                  transition: "max-height 1.15s ease-in-out",
+                }}
+              >
+                <PricingTable data={activePricingTable} />
               </div>
             </div>
             <hr />
