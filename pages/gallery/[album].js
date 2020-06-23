@@ -90,32 +90,34 @@ export default function Gallery(props) {
             {props.album}
           </h1>
           <div className="columns is-gapless">
-            {props.imagesColumns.map((column, index) => (
-              <div
-                className="column"
-                key={`album${props.album}-column${index}`}
-              >
-                {column.map((image) => (
-                  <a
-                    key={image.name}
-                    id={`${props.album}/${image.image}`}
-                    onClick={(event) => {
-                      setImageModal(
-                        `/images/gallery/${event.currentTarget.id}`
-                      );
-                      modalSwitch(true);
-                    }}
-                  >
-                    <Image
-                      folder="gallery"
-                      album={`/${props.album}`}
-                      image={image.image}
-                      name={image.name}
-                    />
-                  </a>
-                ))}
-              </div>
-            ))}
+            {props.imagesColumns &&
+              props.imagesColumns.map((column, index) => (
+                <div
+                  className="column"
+                  key={`album${props.album}-column${index}`}
+                >
+                  {column &&
+                    column.map((image) => (
+                      <a
+                        key={image.name}
+                        id={`${props.album}/${image.image}`}
+                        onClick={(event) => {
+                          setImageModal(
+                            `/images/gallery/${event.currentTarget.id}`
+                          );
+                          modalSwitch(true);
+                        }}
+                      >
+                        <Image
+                          folder="gallery"
+                          album={`/${props.album}`}
+                          image={image.image}
+                          name={image.name}
+                        />
+                      </a>
+                    ))}
+                </div>
+              ))}
           </div>
         </div>
       </div>
