@@ -127,49 +127,9 @@ export default function Gallery(props) {
           onClick={() => modalSwitch(false)}
         ></div>
         <div className="modal-content">
-          {/* <div className="columns is-gapless">
-            <a>
-              <div className="column is-1">
-                <div
-                  className="has-text-centered"
-                  style={{
-                    margin: "0",
-                    position: "absolute",
-                    top: "50%",
-                    msTransform: "translateY(-50%)",
-                    transform: "translateY(-50%)",
-                  }}
-                >
-                  <p className="image">
-                    <i class="fas fa-chevron-circle-left"></i>
-                  </p>
-                </div>
-              </div>
-            </a>
-            <div className="column"> */}
           <p className="image">
             <img src={imageModal} alt="" />
           </p>
-          {/* </div>
-            <div className="column is-1">
-              <div
-                className="has-text-centered"
-                style={{
-                  margin: "0",
-                  position: "absolute",
-                  top: "50%",
-                  msTransform: "translateY(-50%)",
-                  transform: "translateY(-50%)",
-                }}
-              >
-                <a>
-                  <p className="image">
-                    <i class="fas fa-chevron-circle-right"></i>
-                  </p>
-                </a>
-              </div>
-            </div>
-          </div> */}
         </div>
 
         <button
