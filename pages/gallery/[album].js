@@ -14,7 +14,6 @@ export async function getStaticPaths() {
   const res = albums.map((album) => {
     return { params: { album: album } };
   });
-
   return {
     paths: res,
     fallback: true,
