@@ -11,7 +11,6 @@ import Footer from "../../components/Footer";
 export async function getStaticProps() {
   const galleryDirectory = path.join(process.cwd(), "public/images/gallery");
   const folders = fs.readdirSync(galleryDirectory);
-  folders.splice(0, 1);
   const albums = folders.map((folder) => {
     return {
       name: folder,

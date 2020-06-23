@@ -30,7 +30,6 @@ export async function getStaticProps(data) {
     `public/images/gallery/${data.params.album}`
   );
   const filesName = fs.readdirSync(albumDirectory);
-  filesName.splice(0, 1);
   filesName.splice(filesName.indexOf("index.jpg"), 1);
   const images = filesName.map((fileName) => {
     return {

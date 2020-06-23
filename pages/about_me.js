@@ -11,7 +11,6 @@ export async function getStaticProps() {
     "public/images/certifications"
   );
   const filesName = fs.readdirSync(certificationsDirectory);
-  filesName.splice(0, 1);
   const images = filesName.map((fileName) => {
     return {
       image: fileName,
