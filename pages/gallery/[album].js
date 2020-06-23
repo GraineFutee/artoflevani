@@ -11,10 +11,10 @@ export async function getStaticPaths() {
   const galleryDirectory = path.join(process.cwd(), "public/images/gallery");
   const albums = fs.readdirSync(galleryDirectory);
   albums.splice(0, 1);
-  let res = [];
-  albums.map((album) => {
-    res = [...res, { params: { album: album } }];
+  const res = albums.map((album) => {
+    return { params: { album: album } };
   });
+
   return {
     paths: res,
     fallback: true,
