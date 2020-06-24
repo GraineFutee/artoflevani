@@ -29,8 +29,15 @@ export default function AboutMe(props) {
   return (
     <>
       <section
-        className="hero is-success is-bold"
-        style={{ boxShadow: "5px 5px 5px 5px #d1ccc0" }}
+        className="hero is-bold"
+        style={{
+          backgroundColor: "#2c3e50",
+          backgroundImage: `url(/images/aboutBackground/index.jpg)`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+        }}
       >
         <Navbar page="about_me" />
         <div className="hero-body">
@@ -51,8 +58,11 @@ export default function AboutMe(props) {
                   ></figure>
                 </div>
                 <div className="column">
-                  <div className="content is-small">
-                    <p className="title is-6">Me</p>
+                  <div
+                    className="content is-small box has-text-white"
+                    style={{ backgroundColor: "rgba(47, 53, 66, 0.8)" }}
+                  >
+                    <p className="title is-6 has-text-white">Me</p>
                     <p>
                       Exquisite cordially mr happiness of neglected distrusts.
                       Boisterous impossible unaffected he me everything. Is fine
@@ -62,14 +72,14 @@ export default function AboutMe(props) {
                       found sir met think hopes are marry among. Delightful
                       remarkably new assistance saw literature mrs favourable.
                     </p>
-                    <p className="title is-6">contact</p>
+                    <p className="title is-6 has-text-white">contact</p>
                     <p>
                       <b>Mail. </b> ArtofLevanidze@gmail.com
                     </p>
                     <p>
                       <b>Tel. </b> 04 86 97 85 74
                     </p>
-                    <p className="title is-6">Work</p>
+                    <p className="title is-6 has-text-white">Work</p>
                     <p>
                       Talking chamber as shewing an it minutes. Trees fully of
                       blind do. Exquisite favourite at do extensive listening.
@@ -81,7 +91,7 @@ export default function AboutMe(props) {
                 </div>
                 <div className="column is-1"></div>
               </div>
-              <h1 className="title is-4">Certifications</h1>
+              <h1 className="title is-4 has-text-white">Certifications</h1>
               <div className="columns is-multiline">
                 {props.images.map((image) => (
                   <div className="column is-3" key={image}>

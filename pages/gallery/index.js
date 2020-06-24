@@ -30,8 +30,15 @@ export async function getStaticProps() {
 export default function Gallery(props) {
   return (
     <section
-      className="hero is-fullheight is-warning is-bold"
-      style={{ boxShadow: "5px 5px 5px 5px #d1ccc0" }}
+      className="hero is-fullheight is-bold"
+      style={{
+        backgroundColor: "#2c3e50",
+        backgroundImage: `url(/images/galleryBackground/index.jpg)`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+      }}
     >
       <Navbar page="gallery" />
       <div className="hero-body" style={{ padding: "0" }}>
@@ -45,7 +52,7 @@ export default function Gallery(props) {
           </div>
         </div>
       </div>
-      <Footer color="dark" />
+      <Footer color="white" />
     </section>
   );
 }

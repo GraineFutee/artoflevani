@@ -5,6 +5,7 @@ export default function PricingPlan({ deal }) {
   return (
     <div
       className={`pricing-plan ${deal.color} ${isActive && "is-active"}`}
+      style={{ backgroundColor: "rgba(255, 255, 255, 0.7)" }}
       onMouseEnter={() => {
         switchActive(true);
       }}
@@ -12,8 +13,16 @@ export default function PricingPlan({ deal }) {
         switchActive(false);
       }}
     >
-      <div className="plan-header">{deal.name}</div>
-      <div className="plan-price">
+      <div
+        className="plan-header"
+        style={{ backgroundColor: "rgba(255, 255, 255, 0.7)" }}
+      >
+        {deal.name}
+      </div>
+      <div
+        className="plan-price"
+        style={{ backgroundColor: "rgba(255, 255, 255, 0.7)" }}
+      >
         <span className="plan-price-amount">
           <span className="plan-price-currency">{deal.currency}</span>
           {deal.price}
@@ -21,7 +30,11 @@ export default function PricingPlan({ deal }) {
       </div>
       <div className="plan-items">
         {deal.featuresValues.map((value, index) => (
-          <div className="plan-item" key={index}>
+          <div
+            className="plan-item"
+            style={{ backgroundColor: "rgba(235, 235, 235, 0.7)" }}
+            key={index}
+          >
             {value}
           </div>
         ))}

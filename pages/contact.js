@@ -111,20 +111,20 @@ export default function Contact() {
   return (
     <>
       <section
-        className="hero is-danger is-bold"
-        // style={{
-        //   backgroundColor: "#2c3e50",
-        //   backgroundImage: `url(/images/backgrounds/joan-villalon-otG-Gi4ebDo-unsplash.jpg)`,
-        //   backgroundPosition: "center",
-        //   backgroundSize: "cover",
-        //   backgroundRepeat: "no-repeat",
-        //   backgroundAttachment: "fixed",
-        // }}
+        className="hero is-bold"
+        style={{
+          backgroundColor: "#2c3e50",
+          backgroundImage: `url(/images/contactBackground/index.jpg)`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+        }}
       >
         <Navbar page="contact" />
         <div className="hero-body">
           <div className="container">
-            <h1 className="title is-2">Prices</h1>
+            <h1 className="title is-2 has-text-white">Prices</h1>
             <div className="container">
               <div className="select">
                 <select
@@ -151,13 +151,16 @@ export default function Contact() {
               </div>
             </div>
             <hr />
-            <h1 className="title is-2">Contact</h1>
+            <h1 className="title is-2 has-text-white">Contact</h1>
             <div className="columns">
               <div className="column is-1"></div>
               <div className="column is-8">
-                <div className="columns box has-background-danger">
-                  <div className="column is-6">
-                    <p className="title is-6">Contact Info</p>
+                <div
+                  className="columns box"
+                  style={{ backgroundColor: "rgba(47, 53, 66, 0.8)" }}
+                >
+                  <div className="column is-6 has-text-white">
+                    <p className="title is-6 has-text-white">Contact Info</p>
                     <hr />
                     <div className="content container is-fluid">
                       <p>
