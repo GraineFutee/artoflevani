@@ -10,7 +10,6 @@ import Footer from "../../components/Footer";
 export async function getStaticPaths() {
   const galleryDirectory = path.join(process.cwd(), "public/images/gallery");
   const albums = fs.readdirSync(galleryDirectory);
-  albums.splice(0, 1);
   const res = albums.map((album) => {
     return { params: { album: album } };
   });
