@@ -152,16 +152,32 @@ export default function Contact() {
             </div>
             <hr />
             <h1 className="title is-2">Contact</h1>
-
-            <div className="columns box has-background-danger">
+            <div className="columns">
               <div className="column is-1"></div>
-              <div className="column">
-                <p className="title is-6">Contact Info</p>
-                <div className="content">
-                  <p>Phone : 43 45 65 32 76</p>
-                  <p>E-mail : ArtofLevanidze@gmail.com</p>
-                </div>
-                {/* <form>
+              <div className="column is-8">
+                <div className="columns box has-background-danger">
+                  <div className="column is-6">
+                    <p className="title is-6">Contact Info</p>
+                    <hr />
+                    <div className="content container is-fluid">
+                      <p>
+                        <b className="heading has-text-white">Name </b>
+                        <b> Levani</b>
+                      </p>
+                      <p>
+                        <b className="heading has-text-white">Surname </b>
+                        <b> Levanidze</b>
+                      </p>
+                      <p>
+                        <b className="heading has-text-white">Phone </b>
+                        <b> 43 45 65 32 76</b>
+                      </p>
+                      <p>
+                        <b className="heading has-text-white">E-mail </b>
+                        <b> ArtofLevanidze@gmail.com</b>
+                      </p>
+                    </div>
+                    {/* <form>
                   <div className="field">
                     <div className="control">
                       <input
@@ -190,16 +206,23 @@ export default function Contact() {
                   </div>
                   <button className="button is-info">Send</button>
                 </form> */}
+                  </div>
+                  <div className="column">
+                    <figure className="image">
+                      <img
+                        className="is-rounded"
+                        src="/images/profil.jpg"
+                        style={{
+                          border: "3px solid white",
+                          boxShadow:
+                            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+                        }}
+                      />
+                    </figure>
+                  </div>
+                </div>
               </div>
-              <div className="column">
-                <figure className="image">
-                  <img
-                    className="is-rounded"
-                    src="/images/gallery/Portraits/index.jpg"
-                  />
-                </figure>
-              </div>
-              <div className="column is-1"></div>
+              <div className="column"></div>
             </div>
           </div>
         </div>
