@@ -17,7 +17,7 @@ export async function getStaticProps() {
       pictures:
         fs.readdirSync(
           path.join(process.cwd(), `public/images/gallery/${folder}`)
-        ).length - 2,
+        ).length - 1,
     };
   });
   return {
