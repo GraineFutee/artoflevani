@@ -43,7 +43,7 @@ export default function AboutMe(props) {
                     className="image is-4by5"
                     style={{
                       backgroundColor: "#2c3e50",
-                      backgroundImage: `url(/images/gallery/Portraits/index.jpg)`,
+                      backgroundImage: `url(/images/profil.jpg)`,
                       backgroundPosition: "center",
                       backgroundSize: "cover",
                       backgroundRepeat: "no-repeat",
