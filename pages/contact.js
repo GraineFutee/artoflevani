@@ -161,7 +161,7 @@ export default function Contact() {
                   <p>Phone : 43 45 65 32 76</p>
                   <p>E-mail : ArtofLevanidze@gmail.com</p>
                 </div>
-                <form>
+                {/* <form>
                   <div className="field">
                     <div className="control">
                       <input
@@ -189,7 +189,7 @@ export default function Contact() {
                     </div>
                   </div>
                   <button className="button is-info">Send</button>
-                </form>
+                </form> */}
               </div>
               <div className="column">
                 <figure className="image">
