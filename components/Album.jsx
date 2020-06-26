@@ -52,7 +52,7 @@ export default function Album(props) {
           }}
         >
           <p className="title has-text-white">{props.album}</p>
-          <p className="title has-text-white">{props.pictures} Pictures</p>
+          <p className="has-text-white">{props.pictures} Pictures</p>
         </div>
       </figure>
     </Link>
