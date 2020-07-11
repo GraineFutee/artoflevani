@@ -9,7 +9,7 @@ export default function Navbar(props) {
       className="navbar"
       role="navigation"
       aria-label="main navigation"
-      style={{ zIndex: "10" }}
+      style={{ zIndex: "1000" }}
     >
       <div className="navbar-brand">
         <a className="navbar-item" href="/">
@@ -35,14 +35,18 @@ export default function Navbar(props) {
         className={`navbar-menu ${burger && "is-active"}`}
       >
         <div className="navbar-end">
-          <a
-            className={`navbar-item is-tab ${
-              props.page === "gallery" && "is-active"
-            }`}
-            href="/gallery"
-          >
-            Gallery
-          </a>
+          <div className={`navbar-item has-dropdown is-hoverable`}>
+            <a href="/gallery" className="navbar-link">
+              Gallery
+            </a>
+            <div className="navbar-dropdown">
+              {props.albums.map((album) => (
+                <a href={`/gallery/${album}`} className="navbar-item">
+                  {album}
+                </a>
+              ))}
+            </div>
+          </div>
           <a
             className={`navbar-item is-tab ${
               props.page === "about_me" && "is-active"

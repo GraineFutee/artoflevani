@@ -51,8 +51,9 @@ export default function Album(props) {
             transition: "opacity 0.5s ease-in-out",
           }}
         >
-          <p className="title has-text-white">{props.album}</p>
-          <p className="has-text-white">{props.pictures} Pictures</p>
+          <p className="title has-text-white" style={{ marginTop: "25px" }}>
+            {props.album}
+          </p>
         </div>
       </figure>
     </Link>

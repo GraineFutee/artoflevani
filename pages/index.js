@@ -14,10 +14,12 @@ export async function getStaticProps() {
     "public/images/backgrounds"
   );
   const images = fs.readdirSync(backgroundsImgDirectory);
-
+  const galleryDirectory = path.join(process.cwd(), "public/images/gallery");
+  const folders = fs.readdirSync(galleryDirectory);
   return {
     props: {
       images,
+      folders,
     },
   };
 }
@@ -79,9 +81,12 @@ export default function Home(props) {
           zIndex: "1",
         }}
       ></section>
-      <Navbar />
+      <Navbar albums={props.folders} />
       <div className="hero-body" style={{ zIndex: "10" }}>
-        <div className="container has-text-centered">
+        <div
+          className="container has-text-centered"
+          style={{ marginTop: "300px" }}
+        >
           <h1 className="title has-text-white is-1">Art of Levani </h1>
         </div>
       </div>

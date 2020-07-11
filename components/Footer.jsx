@@ -33,7 +33,7 @@ export default function Album(props) {
       </a>
       <i
         className={`has-text-${props.color} is-size-7 is-pulled-right`}
-        style={{ margin: "5px" }}
+        style={{ margin: "5px", marginRight: "15px" }}
       >
         <b>&copy;</b> Levani Levanidze
       </i>

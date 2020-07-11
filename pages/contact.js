@@ -1,9 +1,22 @@
+import fs from "fs";
+import path from "path";
+
 import Navbar from "../components/Navbar";
 import PricingTable from "../components/PricingTable";
 import Footer from "../components/Footer";
 import { useState } from "react";
 
-export default function Contact() {
+export async function getStaticProps() {
+  const galleryDirectory = path.join(process.cwd(), "public/images/gallery");
+  const folders = fs.readdirSync(galleryDirectory);
+  return {
+    props: {
+      folders,
+    },
+  };
+}
+
+export default function Contact(props) {
   const [height, setHeight] = useState("2000px");
   const [pricingTables] = useState([
     {
@@ -98,16 +111,16 @@ export default function Contact() {
       ],
     },
   ]);
-  const [activePricingTable, setActivePricingTable] = useState(
-    pricingTables[0]
-  );
-  function switchPricingTable(value) {
-    setHeight("0px");
-    setTimeout(() => {
-      setActivePricingTable(pricingTables[value]);
-      setHeight("2000px");
-    }, 1150);
-  }
+  // const [activePricingTable, setActivePricingTable] = useState(
+  //   pricingTables[0]
+  // );
+  // function switchPricingTable(value) {
+  //   setHeight("0px");
+  //   setTimeout(() => {
+  //     setActivePricingTable(pricingTables[value]);
+  //     setHeight("2000px");
+  //   }, 1150);
+  // }
   return (
     <>
       <section
@@ -121,12 +134,12 @@ export default function Contact() {
           backgroundAttachment: "fixed",
         }}
       >
-        <Navbar page="contact" />
+        <Navbar page="contact" albums={props.folders} />
         <div className="hero-body">
           <div className="container">
             <h1 className="title is-2 has-text-white">Prices</h1>
             <div className="container">
-              <div className="select">
+              {/* <div className="select">
                 <select
                   onChange={(event) => {
                     switchPricingTable(event.target.value);
@@ -138,7 +151,7 @@ export default function Contact() {
                     </option>
                   ))}
                 </select>
-              </div>
+              </div> */}
               <div
                 className="container is-fluid"
                 style={{
@@ -147,7 +160,9 @@ export default function Contact() {
                   transition: "max-height 1.15s ease-in-out",
                 }}
               >
-                <PricingTable data={activePricingTable} />
+                {pricingTables.map((pricingTable) => (
+                  <PricingTable data={pricingTable} />
+                ))}
               </div>
             </div>
             <hr />

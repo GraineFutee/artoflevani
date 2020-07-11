@@ -59,11 +59,14 @@ export async function getStaticProps(data) {
     if (arrayNo !== 3) arrayNo++;
     else arrayNo = 1;
   });
+  const galleryDirectory = path.join(process.cwd(), "public/images/gallery");
+  const folders = fs.readdirSync(galleryDirectory);
   return {
     props: {
       images,
       imagesColumns: [imageArray1, imageArray2, imageArray3],
       album: data.params.album,
+      folders,
     },
   };
 }
@@ -76,7 +79,7 @@ export default function Gallery(props) {
       className="hero is-fullheight is-light is-bold"
       style={{ boxShadow: "5px 5px 5px 5px #d1ccc0" }}
     >
-      <Navbar page="gallery" />
+      <Navbar page="gallery" albums={props.folders} />
       <div className="hero-body" style={{ padding: "0" }}>
         <div className="container">
           <h1 className="title">

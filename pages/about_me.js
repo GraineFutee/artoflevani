@@ -17,10 +17,12 @@ export async function getStaticProps() {
       name: fileName.split(".").slice(0, -1).join("."),
     };
   });
-
+  const galleryDirectory = path.join(process.cwd(), "public/images/gallery");
+  const folders = fs.readdirSync(galleryDirectory);
   return {
     props: {
       images,
+      folders,
     },
   };
 }
@@ -39,7 +41,7 @@ export default function AboutMe(props) {
           backgroundAttachment: "fixed",
         }}
       >
-        <Navbar page="about_me" />
+        <Navbar page="about_me" albums={props.folders} />
         <div className="hero-body">
           <div className="container">
             <div className="container">

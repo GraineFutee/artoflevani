@@ -23,6 +23,7 @@ export async function getStaticProps() {
   return {
     props: {
       albums,
+      folders,
     },
   };
 }
@@ -40,7 +41,7 @@ export default function Gallery(props) {
         backgroundAttachment: "fixed",
       }}
     >
-      <Navbar page="gallery" />
+      <Navbar page="gallery" albums={props.folders} />
       <div className="hero-body" style={{ padding: "0" }}>
         <div className="container">
           <div className="columns is-gapless is-multiline">
