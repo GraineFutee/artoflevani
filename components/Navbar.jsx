@@ -40,11 +40,12 @@ export default function Navbar(props) {
               Gallery
             </a>
             <div className="navbar-dropdown">
-              {props.albums.map((album) => (
-                <a href={`/gallery/${album}`} className="navbar-item">
-                  {album}
-                </a>
-              ))}
+              {props.albums &&
+                props.albums.map((album) => (
+                  <a href={`/gallery/${album}`} className="navbar-item">
+                    {album}
+                  </a>
+                ))}
             </div>
           </div>
           <a
