@@ -1,1 +1,1 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+Repository for Levany Levanidze's website : https://sad-leakey-a5543e.netlify.app/
